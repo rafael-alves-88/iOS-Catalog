@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bwb-kg-0pF">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Livros-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LivrosViewController" customModule="Catalogo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sXc-ry-hg0">
+                                <rect key="frame" x="52" y="74" width="139" height="110"/>
+                                <state key="normal" title="Button" image="Livro1"/>
+                                <connections>
+                                    <action selector="buttonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ohM-5K-3OJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ug0-Di-41Z">
+                                <rect key="frame" x="194" y="74" width="139" height="110"/>
+                                <state key="normal" title="Button" image="Livro2"/>
+                                <connections>
+                                    <action selector="buttonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vf2-cE-Gy8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9s-wm-Ozl">
+                                <rect key="frame" x="194" y="245" width="139" height="110"/>
+                                <state key="normal" title="Button" image="Livro4"/>
+                                <connections>
+                                    <action selector="buttonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OFA-pX-RhC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U31-s6-Ifk">
+                                <rect key="frame" x="52" y="245" width="139" height="110"/>
+                                <state key="normal" title="Button" image="Livro3"/>
+                                <connections>
+                                    <action selector="buttonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AeL-VB-XEe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Livros" image="books" id="Nzf-Ne-Hcg"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="4te-pw-6L5" kind="presentation" identifier="livroToDetalheSegue" id="fEE-mG-Rw2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="223" y="205"/>
+        </scene>
+        <!--Detalhe View Controller-->
+        <scene sceneID="B2L-4m-DMA">
+            <objects>
+                <viewController id="4te-pw-6L5" customClass="DetalheViewController" customModule="Catalogo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jhE-Sw-oVH"/>
+                        <viewControllerLayoutGuide type="bottom" id="7oB-TB-VZR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="j9z-jg-5v3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8U3-dg-vqu">
+                                <rect key="frame" x="54" y="269" width="69" height="30"/>
+                                <state key="normal" title="Parte 1"/>
+                                <connections>
+                                    <action selector="buttonPartTap:" destination="4te-pw-6L5" eventType="touchUpInside" id="Udd-eU-rvt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fx8-Rc-YNR">
+                                <rect key="frame" x="199" y="269" width="68" height="30"/>
+                                <state key="normal" title="Parte 2"/>
+                                <connections>
+                                    <action selector="buttonPartTap:" destination="4te-pw-6L5" eventType="touchUpInside" id="RdW-un-hLP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPD-MX-aGq">
+                                <rect key="frame" x="81" y="194" width="180" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7q-F5-YRl">
+                                <rect key="frame" x="20" y="83" width="87" height="30"/>
+                                <state key="normal" title="Fechar"/>
+                                <connections>
+                                    <action selector="closeTap:" destination="4te-pw-6L5" eventType="touchUpInside" id="B7a-I8-LOA"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ach-ui-7Az">
+                                <rect key="frame" x="81" y="140" width="180" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="closeButton" destination="a7q-F5-YRl" id="vmW-c8-fwE"/>
+                        <outlet property="itemTituloLabel" destination="ZPD-MX-aGq" id="J1y-aO-Fl1"/>
+                        <outlet property="part1Button" destination="8U3-dg-vqu" id="83l-E9-yh3"/>
+                        <outlet property="part2Button" destination="fx8-Rc-YNR" id="TYk-MW-7DN"/>
+                        <outlet property="tituloLabel" destination="Ach-ui-7Az" id="4ea-Md-Ssy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cob-7W-fBd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1179" y="505"/>
+        </scene>
+        <!--Filmes Table View Controller-->
+        <scene sceneID="ceR-J8-Dw0">
+            <objects>
+                <tableViewController id="XNf-rk-7Q7" customClass="FilmesTableViewController" customModule="Catalogo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="tVf-cR-4oZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="uyT-Cy-Qbn">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CellID" rowHeight="130" id="9b6-dG-JL0">
+                                        <rect key="frame" x="0.0" y="64" width="320" height="130"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9b6-dG-JL0" id="SiL-D1-e6l">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="129"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjH-I7-YLR">
+                                                    <rect key="frame" x="65" y="11" width="214" height="107"/>
+                                                    <state key="normal" title="Button" image="filme1"/>
+                                                    <connections>
+                                                        <action selector="buttonTap:" destination="XNf-rk-7Q7" eventType="touchUpInside" id="G23-EA-skY"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CellID" rowHeight="130" id="WOK-Ea-wqD">
+                                        <rect key="frame" x="0.0" y="194" width="320" height="130"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WOK-Ea-wqD" id="eK7-th-82r">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="129"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a95-kh-jdM">
+                                                    <rect key="frame" x="65" y="11" width="214" height="107"/>
+                                                    <state key="normal" title="Button" image="filme2"/>
+                                                    <connections>
+                                                        <action selector="buttonTap:" destination="XNf-rk-7Q7" eventType="touchUpInside" id="bOc-IC-YY4"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CellID" rowHeight="130" id="5R0-Qe-QqR">
+                                        <rect key="frame" x="0.0" y="324" width="320" height="130"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5R0-Qe-QqR" id="Xzl-AE-Vc8">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="129"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gKc-HC-oDW">
+                                                    <rect key="frame" x="65" y="13" width="214" height="104"/>
+                                                    <state key="normal" title="Button" image="filme3"/>
+                                                    <connections>
+                                                        <action selector="buttonTap:" destination="XNf-rk-7Q7" eventType="touchUpInside" id="rkb-xB-F66"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CellID" rowHeight="130" id="mRB-3t-1s8">
+                                        <rect key="frame" x="0.0" y="454" width="320" height="130"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mRB-3t-1s8" id="CE7-NC-x7v">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="129"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXK-0W-frk">
+                                                    <rect key="frame" x="64" y="11" width="215" height="108"/>
+                                                    <state key="normal" title="Button" image="filme4"/>
+                                                    <connections>
+                                                        <action selector="buttonTap:" destination="XNf-rk-7Q7" eventType="touchUpInside" id="g5r-vg-GBn"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="XNf-rk-7Q7" id="JQC-uE-cnc"/>
+                            <outlet property="delegate" destination="XNf-rk-7Q7" id="zA6-KK-6nk"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="sNk-d1-rTd"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="4te-pw-6L5" kind="show" identifier="filmeToDetalheSegue" id="pYP-EV-t3O"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yUX-lW-1OM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="663" y="872"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ngt-9T-Nrc">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="bwb-kg-0pF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="nbc-Gm-9Um">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="c4D-Vd-WoS"/>
+                        <segue destination="BJF-Sf-jIm" kind="relationship" relationship="viewControllers" id="HK2-Pr-VwE"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QTs-T7-l8t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-349" y="505"/>
+        </scene>
+        <!--Filmes-->
+        <scene sceneID="8gU-YG-Pxm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BJF-Sf-jIm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Filmes" image="movies" id="995-i5-PMQ"/>
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yR9-lZ-3jj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="XNf-rk-7Q7" kind="relationship" relationship="rootViewController" id="aht-sf-1zS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B1H-VZ-4Fx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="223" y="872"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Livro1" width="85" height="110"/>
+        <image name="Livro2" width="85" height="110"/>
+        <image name="Livro3" width="85" height="110"/>
+        <image name="Livro4" width="85" height="110"/>
+        <image name="books" width="50" height="50"/>
+        <image name="filme1" width="160" height="107"/>
+        <image name="filme2" width="160" height="107"/>
+        <image name="filme3" width="160" height="104"/>
+        <image name="filme4" width="161" height="108"/>
+        <image name="movies" width="50" height="50"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="pYP-EV-t3O"/>
+    </inferredMetricsTieBreakers>
+</document>
